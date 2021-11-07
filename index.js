@@ -11,17 +11,6 @@ app.use(cors());
 app.use(express.json());
 
 
-/* 
-const uri = "mongodb+srv://travel_agent:<password>@cluster0.ofxwj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
-*/
-
 const uri = `mongodb+srv://${process.env.USER_DB}:${process.env.USER_PASS}@cluster0.ofxwj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
